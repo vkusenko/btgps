@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/setting_folder_name">
+        <EditTextPreference
+            android:title="@string/google_folder_name"
+            android:defaultValue="@string/folder_name_default"
+            android:key="google_folder_name"
+            android:summary="@string/google_folder_name_pref_summary"/>
+        <EditTextPreference
+            android:title="@string/app_data_folder_name"
+            android:defaultValue="@string/folder_name_default"
+            android:key="folder_name"
+            android:summary="@string/folder_name_pref_summary"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setting_records">
+        <EditTextPreference
+            android:title="@string/interval_recording_points"
+            android:dialogTitle="@string/time_in_seconds"
+            android:defaultValue="@string/default_interval_recording"
+            android:key="interval_points"
+            android:numeric="integer"
+            android:maxLength="2"/>
+        <ListPreference
+            android:title="@string/scheme_track"
+            android:key="scheme_track"
+            android:defaultValue="@string/default_track_scheme"
+            android:entries="@array/track_scheme_entries"
+            android:entryValues="@array/track_scheme_entries"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
